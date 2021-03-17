@@ -17,19 +17,15 @@ public class MoedasCotadas {
 
 		for (int i = 0; i < BRL.length(); i++) {
 			if (i != 1) {
-				for (int j = 10; j <= 10; j++) {
-					BR += (BRL.charAt(i) - 48) * Math.pow(10, -exp);
-					exp++;
-				}
+				BR += (BRL.charAt(i) - 48) * Math.pow(10, -exp);
+				exp++;
 			}
 		}
 		exp = 0;
 		for (int i = 0; i < USD.length(); i++) {
 			if (i != 1) {
-				for (int j = 10; j <= 10; j++) {
-					EUA += (USD.charAt(i) - 48) * Math.pow(10, -exp);
-					exp++;
-				}
+				EUA += (USD.charAt(i) - 48) * Math.pow(10, -exp);
+				exp++;
 			}
 		}
 		exp = 0;
@@ -41,10 +37,8 @@ public class MoedasCotadas {
 				}
 			} else {
 				if (i != 1) {
-					for (int j = 10; j <= 10; j++) {
-						Bit += (BTC.charAt(i) - 48) * Math.pow(10, -exp);
-						exp++;
-					}
+					Bit += (BTC.charAt(i) - 48) * Math.pow(10, -exp);
+					exp++;
 				}
 			}
 		}

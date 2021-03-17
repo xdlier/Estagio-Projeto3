@@ -25,6 +25,7 @@ public class CotacaoController {
 	@RequestMapping("/cotacao")
 	public String Cotacao(Model modelo) {
 		try {
+			
 			url = "http://data.fixer.io/api/latest?access_key=be4781aab7d345a2ea6c476c905d9745&symbols=EUR,USD,BTC,BRL";
 
 			HttpURLConnection conexao = (HttpURLConnection) new URL(url).openConnection();
