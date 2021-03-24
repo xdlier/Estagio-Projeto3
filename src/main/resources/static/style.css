@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+.card-largura{
+	max-width: 18rem;
+}
+
+.carrosel{
+	object-fit: cover;
+	height: 500px;
+}
+
+.background{
+	background-color:rgba(0, 0, 0, 0.5);
+}

@@ -8,16 +8,14 @@ import compasso.estagio.gabriel.Projeto3.modelo.LeitorFixer;
 import compasso.estagio.gabriel.Projeto3.modelo.UtilizadorAPI;
 
 @Controller
-public class CotacaoController {
+public class HomeController {
 
-	@RequestMapping("/cotacao")
-	public String Cotacao(Model modelo) {
+	@RequestMapping("/")
+	public String home(Model modelo) {
 		LeitorFixer dados = UtilizadorAPI.modelador(modelo);
-		modelo.addAttribute("Data", dados.getDate());
 		modelo.addAttribute("Euro", dados.getMoedas().getEUR());
 		modelo.addAttribute("Dolar", dados.getMoedas().getUSD());
 		modelo.addAttribute("Bitcoin", dados.getMoedas().getBTC());
-		return "cotacao";
+		return "index";
 	}
-
 }

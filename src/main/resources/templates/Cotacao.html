@@ -3,11 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <title>Cotacao</title>
+<link rel="stylesheet"
+	href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+	integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+	crossorigin="anonymous">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<h2>A cotação atual é:</h2>
-<h4 th:text="${Euro}">euro</h4>
-<h4 th:text="${Dolar}">euro</h4>
-<h4 th:text="${Bitcoin}">euro</h4>
+	<header>
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			<a class="navbar-brand" href="/">Casa da Moeda - Compasso</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarNav" aria-controls="navbarNav"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse justify-content-end"
+				id="navbarNav">
+				<ul class="navbar-nav">
+					<li class="nav-item active"><a class="nav-link" href="/">Início
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="cotacao">Cotação
+							Comercial</a></li>
+					<li class="nav-item"><a class="nav-link" href="turismo">Cotação
+							Turismo</a></li>
+					<!-- 					<li class="nav-item"><a class="nav-link" href="#">Conversor -->
+					<!-- 							de moeda</a></li> -->
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+
+	<h2>A cotação atual é:</h2>
+	<section class="container-fluid bg-light">
+		<div class="row justify-content-center">
+
+			<article class="card card-largura col-12 col-md-4 p-0 m-4">
+				<img src="euro.jpg" class="card-img-top " alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Euro</h5>
+					<p class="card-text">Cotação do euro:</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item" th:text="${Data}"></li>
+					<li class="list-group-item">Valor base: 1 euro</li>
+					<li class="list-group-item" th:text="${Euro}"></li>
+				</ul>
+			</article>
+
+
+			<article class="card card-largura col-12 col-md-4 p-0 m-4">
+				<img src="dolar.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">Dólar</h5>
+					<p class="card-text">Cotação do dólar</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item" th:text="${Data}"></li>
+					<li class="list-group-item">Valor base: 1 dólar</li>
+					<li class="list-group-item" th:text="${Dolar}"></li>
+				</ul>
+			</article>
+
+			<article class="card card-largura col-12 col-md-4 p-0 m-4">
+				<img src="bitcoin.jpg" class="card-img-top" alt="...">
+				<div class="card-body">
+					<h5 class="card-title">BitCoin</h5>
+					<p class="card-text">Cotação do BitCoin</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item" th:text="${Data}"></li>
+					<li class="list-group-item">Valor base: 1 BitCoin</li>
+					<li class="list-group-item" th:text="${Bitcoin}"></li>
+				</ul>
+			</article>
+		</div>
+	</section>
+
+	<footer>
+		<p class="bg-secondary text-center m-0">
+			<a href="/" class="text-light">Voltar</a>
+		</p>
+	</footer>
+
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+		integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+		crossorigin="anonymous"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+		crossorigin="anonymous"></script>
+
 </body>
 </html>
